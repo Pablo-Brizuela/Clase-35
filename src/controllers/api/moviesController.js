@@ -4,7 +4,8 @@ const sequelize = db.sequelize;
 
 
 const moviesController = {
-    'create': (req, res) => {
+    create: (req, res) => {
+        
         db.Genre.create(req.body)
             .then(movie => {
                  res.status(200).json({movie, status:200})
